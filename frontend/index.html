@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fraud Call Detector</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;500;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <h1>Fraud Call Detector</h1>
+            <p>Upload Audio for Analysis</p>
+        </header>
+
+        <main>
+            <div class="visualizer-container">
+                <div class="bar-container">
+                    <div id="fraud-bar" class="fraud-bar">
+                        <span id="score-text">Safe</span>
+                    </div>
+                </div>
+                <div class="score-display">
+                    Score: <span id="score-number">0</span>/100
+                </div>
+
+                <div id="risk-factors" class="risk-factors">
+                    <!-- Keywords will appear here -->
+                </div>
+                <!-- Status indicator -->
+                <div class="status-indicator" id="status-indicator">Select an audio file to begin</div>
+            </div>
+
+            <div class="controls">
+                <!-- File Upload Area -->
+                <div class="upload-area">
+                    <input type="file" id="audio-file" accept="audio/*" class="file-input">
+                    <label for="audio-file" class="file-label">
+                        <span class="icon">📁</span> Choose Audio File
+                    </label>
+                    <span id="file-name" class="file-name">No file chosen</span>
+                </div>
+
+                <button id="analyze-btn" class="btn primary-btn" disabled>
+                    <span class="icon">🔍</span> Analyze File
+                </button>
+            </div>
+
+            <div class="transcription-box">
+                <h3>Transcription</h3>
+                <div id="transcription-content" class="content-area">
+                    <!-- Transcription text will appear here -->
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
